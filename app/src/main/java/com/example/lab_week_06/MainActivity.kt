@@ -33,31 +33,22 @@ class MainActivity : AppCompatActivity() {
         // Add data
         catAdapter.setData(
             listOf(
-                CatModel(
-                    Gender.Male,
-                    CatBreed.BalineseJavanese,
-                    "Fred",
-                    "Silent and deadly",
-                    "https://cdn2.thecatapi.com/images/7dj.jpg"
-                ),
-                CatModel(
-                    Gender.Female,
-                    CatBreed.ExoticShorthair,
-                    "Wilma",
-                    "Cuddly assassin",
-                    "https://cdn2.thecatapi.com/images/egv.jpg"
-                ),
-                CatModel(
-                    Gender.Unknown,
-                    CatBreed.AmericanCurl,
-                    "Curious George",
-                    "Award winning investigator",
-                    "https://cdn2.thecatapi.com/images/bar.jpg"
-                )
+                CatModel(Gender.Male, CatBreed.BalineseJavanese, "Fred", "Silent and deadly", "https://cdn2.thecatapi.com/images/7dj.jpg"),
+                CatModel(Gender.Female, CatBreed.ExoticShorthair, "Wilma", "Cuddly assassin", "https://cdn2.thecatapi.com/images/egv.jpg"),
+                CatModel(Gender.Unknown, CatBreed.AmericanCurl, "Curious George", "Award winning investigator", "https://cdn2.thecatapi.com/images/bar.jpg"),
+                CatModel(Gender.Male, CatBreed.Bengal, "Max", "Energetic and playful", "https://cdn2.thecatapi.com/images/O3btzLlsO.png"),
+                CatModel(Gender.Female, CatBreed.Siamese, "Luna", "Elegant and vocal", "https://cdn2.thecatapi.com/images/ai6.jpg"),
+                CatModel(Gender.Male, CatBreed.MaineCoon, "Leo", "Gentle giant", "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"),
+                CatModel(Gender.Unknown, CatBreed.Sphynx, "Mystery", "Hairless but fearless", "https://cdn2.thecatapi.com/images/DbwiefiaY.png"),
+                CatModel(Gender.Male, CatBreed.BritishShorthair, "Oliver", "Always napping", "https://cdn2.thecatapi.com/images/s4wQfYoEk.jpg"),
+                CatModel(Gender.Female, CatBreed.Persian, "Bella", "Fluffy and spoiled", "https://cdn2.thecatapi.com/images/mt.jpg"),
+                CatModel(Gender.Female, CatBreed.Ragdoll, "Chloe", "Loves cuddles", "https://cdn2.thecatapi.com/images/mFuWtzsEX.jpg")
+
             )
         )
 
-        // ✅ ItemTouchHelper harus di sini, setelah recyclerView siap
+
+
         val itemTouchHelper = ItemTouchHelper(catAdapter.SwipeToDeleteCallback())
         itemTouchHelper.attachToRecyclerView(recyclerView)
     }
